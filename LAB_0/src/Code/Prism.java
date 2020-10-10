@@ -15,7 +15,7 @@ public class Prism extends Figure implements Printable{
      this.sideAmount = i;
     }
 
-    // oblicza obwod granistoslupa
+    // oblicza pow boczna granistoslupa
     public double calculateLateralSurface()
     {
         double singleWall = this.height * this.sideOfBase;
@@ -32,11 +32,11 @@ public class Prism extends Figure implements Printable{
         return result;
     }
 
-    public double calculatePrismPermeter()
+    public double calculateVolume()
     {
-        double basePermeter = 2 * this.calculatePermeter();
-        double bottomPermeter = this.sideAmount * this.height;
-        double result = basePermeter + bottomPermeter;
+        //double basePermeter = 2 * this.calculatePermeter();
+        //double bottomPermeter = this.sideAmount * this.height;
+        double result = calculateArea() * this.heightr;
         return result;
     }
 
@@ -63,6 +63,6 @@ public class Prism extends Figure implements Printable{
         System.out.println("Base permeter = " + this.calculatePermeter());
 
         System.out.println("Prism area = " + this.calculatePrismArea());
-        System.out.println("Prism permeter = " + this.calculatePrismPermeter());
+        System.out.println("Prism volume = " + this.calculatevolume());
     }
 }
