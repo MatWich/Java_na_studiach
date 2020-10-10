@@ -36,7 +36,7 @@ public class Prism extends Figure implements Printable{
     {
         //double basePermeter = 2 * this.calculatePermeter();
         //double bottomPermeter = this.sideAmount * this.height;
-        double result = calculateArea() * this.heightr;
+        double result = this.calculateArea() * this.height;
         return result;
     }
 
@@ -63,6 +63,6 @@ public class Prism extends Figure implements Printable{
         System.out.println("Base permeter = " + this.calculatePermeter());
 
         System.out.println("Prism area = " + this.calculatePrismArea());
-        System.out.println("Prism volume = " + this.calculatevolume());
+        System.out.println("Prism volume = " + this.calculateVolume());
     }
 }
